@@ -1,7 +1,7 @@
 $fn = 128;
 
 basePlateHeight = 3;
-screwHoleRad = 1.7;
+screwHoleRad = 2;
 holeSpacing = 55.5;
 
 difference() {
@@ -34,7 +34,9 @@ difference() {
     // Screw holes
     translate([0, 0, -1]) {
         cylinder(r=screwHoleRad, h=5);
+        cylinder(r1=screwHoleRad+1.7, h=2);
         translate([holeSpacing, 0, 0]) {
+            cylinder(r1=screwHoleRad+1.7, h=2);
             cylinder(r=screwHoleRad, h=5);
         }
     }
